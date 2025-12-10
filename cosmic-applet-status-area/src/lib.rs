@@ -4,6 +4,8 @@
 mod components;
 mod subscriptions;
 
+pub mod status_notifier_watcher;
+
 pub fn run() -> cosmic::iced::Result {
     components::app::main()
 }

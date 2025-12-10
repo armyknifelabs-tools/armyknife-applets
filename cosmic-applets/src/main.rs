@@ -27,6 +27,9 @@ fn main() -> cosmic::iced::Result {
         "cosmic-applet-notifications" => cosmic_applet_notifications::run(),
         "cosmic-applet-power" => cosmic_applet_power::run(),
         "cosmic-applet-status-area" => cosmic_applet_status_area::run(),
+        "cosmic-applet-status-area-status-notifier-watcher" => {
+            cosmic_applet_status_area::status_notifier_watcher::run()
+        }
         "cosmic-applet-tiling" => cosmic_applet_tiling::run(),
         "cosmic-applet-time" => cosmic_applet_time::run(),
         "cosmic-applet-workspaces" => cosmic_applet_workspaces::run(),

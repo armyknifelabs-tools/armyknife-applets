@@ -9,7 +9,7 @@ use futures::{StreamExt, stream};
 use crate::subscriptions::status_notifier_item::StatusNotifierItem;
 
 mod client;
-mod server;
+pub(crate) mod server;
 
 #[derive(Clone, Debug)]
 pub enum Event {
@@ -51,7 +51,8 @@ async fn connect() -> zbus::Result<(zbus::Connection, client::EventStream)> {
     let connection = zbus::Connection::session().await?;
 
     // Start `StatusNotifierWatcher` service, if there isn't one running already
-    server::create_service(&connection).await?;
+    let dbus = zbus::fdo::DBusProxy::new(&connection).await?;
+    //server::create_service(&connection).await?;
 
     // Connect client and listen for registered/unregistered
     let stream = client::watch(&connection).await?;
