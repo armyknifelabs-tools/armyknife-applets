@@ -11,12 +11,12 @@ Name[sk]=Tlačidlo pracovných plôch
 Name[es]=Botón de espacios de trabajo
 Name[sv]=Knapp för arbetsytor
 Type=Application
-Exec=cosmic-panel-button com.system76.CosmicWorkspaces
+Exec=armyknife-panel-button dev.armyknifeWorkspaces
 Terminal=false
 Categories=COSMIC;
 Keywords=COSMIC;Iced;
 # Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-Icon=com.system76.CosmicPanelWorkspacesButton
+Icon=dev.armyknifePanelWorkspacesButton
 StartupNotify=true
 NoDisplay=true
 X-CosmicApplet=true

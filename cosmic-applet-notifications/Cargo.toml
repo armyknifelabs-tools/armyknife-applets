@@ -1,5 +1,5 @@
 [package]
-name = "cosmic-applet-notifications"
+name = "armyknife-applet-notifications"
 version = "1.0.0"
 edition = "2024"
 license = "GPL-3.0-only"

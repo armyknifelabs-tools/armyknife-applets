@@ -80,7 +80,7 @@ impl cosmic::Application for CosmicA11yApplet {
     type Message = Message;
     type Executor = cosmic::SingleThreadExecutor;
     type Flags = ();
-    const APP_ID: &'static str = "com.system76.CosmicAppletA11y";
+    const APP_ID: &'static str = "dev.armyknifeAppletA11y";
 
     fn init(core: cosmic::app::Core, _flags: Self::Flags) -> (Self, app::Task<Self::Message>) {
         (
@@ -228,7 +228,7 @@ impl cosmic::Application for CosmicA11yApplet {
                 });
             }
             Message::OpenSettings => {
-                let exec = "cosmic-settings accessibility".to_string();
+                let exec = "armyknife-settings accessibility".to_string();
                 if let Some(tx) = self.token_tx.as_ref() {
                     let _ = tx.send(TokenRequest {
                         app_id: Self::APP_ID.to_string(),
@@ -246,7 +246,7 @@ impl cosmic::Application for CosmicA11yApplet {
                     self.token_tx = None;
                 }
                 TokenUpdate::ActivationToken { token, .. } => {
-                    let mut cmd = std::process::Command::new("cosmic-settings");
+                    let mut cmd = std::process::Command::new("armyknife-settings");
                     cmd.arg("accessibility");
                     if let Some(token) = token {
                         cmd.env("XDG_ACTIVATION_TOKEN", &token);

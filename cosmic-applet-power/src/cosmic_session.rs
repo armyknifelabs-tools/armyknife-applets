@@ -4,8 +4,8 @@
 use zbus::proxy;
 
 #[proxy(
-    interface = "com.system76.CosmicSession",
-    default_service = "com.system76.CosmicSession",
+    interface = "dev.armyknifeSession",
+    default_service = "dev.armyknifeSession",
     default_path = "/com/system76/CosmicSession"
 )]
 pub trait CosmicSession {

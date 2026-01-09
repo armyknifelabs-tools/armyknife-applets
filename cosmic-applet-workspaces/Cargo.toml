@@ -1,5 +1,5 @@
 [package]
-name = "cosmic-applet-workspaces"
+name = "armyknife-applet-workspaces"
 version = "1.0.0"
 authors = ["Ashley Wulber <ashley@system76.com>"]
 edition = "2024"

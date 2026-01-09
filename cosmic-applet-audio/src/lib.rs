@@ -246,7 +246,7 @@ impl cosmic::Application for Audio {
     type Message = Message;
     type Executor = cosmic::SingleThreadExecutor;
     type Flags = ();
-    const APP_ID: &'static str = "com.system76.CosmicAppletAudio";
+    const APP_ID: &'static str = "dev.armyknifeAppletAudio";
 
     fn init(core: cosmic::app::Core, _flags: ()) -> (Self, app::Task<Message>) {
         let mut model = css::Model::default();
@@ -439,7 +439,7 @@ impl cosmic::Application for Audio {
                 };
             }
             Message::OpenSettings => {
-                let exec = "cosmic-settings sound".to_string();
+                let exec = "armyknife-settings sound".to_string();
                 if let Some(tx) = self.token_tx.as_ref() {
                     let _ = tx.send(TokenRequest {
                         app_id: Self::APP_ID.to_string(),
@@ -457,7 +457,7 @@ impl cosmic::Application for Audio {
                     self.token_tx = None;
                 }
                 TokenUpdate::ActivationToken { token, .. } => {
-                    let mut cmd = std::process::Command::new("cosmic-settings");
+                    let mut cmd = std::process::Command::new("armyknife-settings");
                     cmd.arg("sound");
                     if let Some(token) = token {
                         cmd.env("XDG_ACTIVATION_TOKEN", &token);

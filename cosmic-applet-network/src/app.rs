@@ -603,7 +603,7 @@ impl cosmic::Application for CosmicNetworkApplet {
                 }
             }
             Message::OpenSettings => {
-                let exec = "cosmic-settings network".to_string();
+                let exec = "armyknife-settings network".to_string();
                 if let Some(tx) = self.token_tx.as_ref() {
                     let _ = tx.send(TokenRequest {
                         app_id: Self::APP_ID.to_string(),
@@ -619,7 +619,7 @@ impl cosmic::Application for CosmicNetworkApplet {
                     self.token_tx = None;
                 }
                 TokenUpdate::ActivationToken { token, .. } => {
-                    let mut cmd = std::process::Command::new("cosmic-settings");
+                    let mut cmd = std::process::Command::new("armyknife-settings");
                     cmd.arg("network");
                     if let Some(token) = token {
                         cmd.env("XDG_ACTIVATION_TOKEN", &token);

@@ -1928,7 +1928,7 @@ impl cosmic::Application for CosmicAppList {
             vec![active]
         } else {
             vec![
-                icon::from_name("com.system76.CosmicAppList")
+                icon::from_name("dev.armyknifeAppList")
                     .size(self.core.applet.suggested_size(false).0)
                     .into(),
             ]

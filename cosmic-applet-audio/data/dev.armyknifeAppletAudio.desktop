@@ -13,12 +13,12 @@ Name[sk]=Zvuk
 Name[sv]=Ljud
 Name[es]=Sonido
 Type=Application
-Exec=cosmic-applet-audio
+Exec=armyknife-applet-audio
 Terminal=false
 Categories=COSMIC;
 Keywords=COSMIC;Iced;
 # Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-Icon=com.system76.CosmicAppletAudio-symbolic
+Icon=dev.armyknifeAppletAudio-symbolic
 StartupNotify=true
 NoDisplay=true
 X-CosmicApplet=true

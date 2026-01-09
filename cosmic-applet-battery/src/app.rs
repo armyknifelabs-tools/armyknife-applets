@@ -129,7 +129,7 @@ impl CosmicBatteryApplet {
         };
         let charging = if on_battery { "" } else { "charging-" };
         self.icon_name =
-            format!("cosmic-applet-battery-level-{battery_percent}-{limited}{charging}symbolic",);
+            format!("armyknife-applet-battery-level-{battery_percent}-{limited}{charging}symbolic",);
     }
 
     fn screen_brightness_percent(&self) -> Option<f64> {
@@ -161,7 +161,7 @@ impl CosmicBatteryApplet {
         };
 
         self.display_icon_name =
-            format!("cosmic-applet-battery-display-brightness-{screen_brightness}-symbolic",);
+            format!("armyknife-applet-battery-display-brightness-{screen_brightness}-symbolic",);
     }
 
     fn set_charging_limit(&mut self, limit: bool) {
@@ -422,7 +422,7 @@ impl cosmic::Application for CosmicBatteryApplet {
                 }
             }
             Message::OpenSettings => {
-                let exec = "cosmic-settings power".to_string();
+                let exec = "armyknife-settings power".to_string();
                 if let Some(tx) = self.token_tx.as_ref() {
                     let _ = tx.send(TokenRequest {
                         app_id: Self::APP_ID.to_string(),
@@ -440,7 +440,7 @@ impl cosmic::Application for CosmicBatteryApplet {
                     self.token_tx = None;
                 }
                 TokenUpdate::ActivationToken { token, .. } => {
-                    let mut cmd = std::process::Command::new("cosmic-settings");
+                    let mut cmd = std::process::Command::new("armyknife-settings");
                     cmd.arg("power");
                     if let Some(token) = token {
                         cmd.env("XDG_ACTIVATION_TOKEN", &token);

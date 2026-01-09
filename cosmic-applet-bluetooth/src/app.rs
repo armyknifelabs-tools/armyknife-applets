@@ -57,9 +57,9 @@ impl CosmicBluetoothApplet {
     #[inline]
     fn update_icon(&mut self) {
         self.icon_name = if self.bluer_state.bluetooth_enabled {
-            "cosmic-applet-bluetooth-active-symbolic"
+            "armyknife-applet-bluetooth-active-symbolic"
         } else {
-            "cosmic-applet-bluetooth-disabled-symbolic"
+            "armyknife-applet-bluetooth-disabled-symbolic"
         }
         .to_string();
     }
@@ -275,7 +275,7 @@ impl cosmic::Application for CosmicBluetoothApplet {
                 );
             }
             Message::OpenSettings => {
-                let exec = "cosmic-settings bluetooth".to_string();
+                let exec = "armyknife-settings bluetooth".to_string();
                 if let Some(tx) = self.token_tx.as_ref() {
                     let _ = tx.send(TokenRequest {
                         app_id: Self::APP_ID.to_string(),
@@ -291,7 +291,7 @@ impl cosmic::Application for CosmicBluetoothApplet {
                     self.token_tx = None;
                 }
                 TokenUpdate::ActivationToken { token, .. } => {
-                    let mut cmd = std::process::Command::new("cosmic-settings");
+                    let mut cmd = std::process::Command::new("armyknife-settings");
                     cmd.arg("bluetooth");
                     if let Some(token) = token {
                         cmd.env("XDG_ACTIVATION_TOKEN", &token);

@@ -12,12 +12,12 @@ Name[sk]=Centrum oznámení
 Name[sv]=Aviseringscenter
 Name[es]=Centro de notificaciones
 Type=Application
-Exec=cosmic-applet-notifications
+Exec=armyknife-applet-notifications
 Terminal=false
 Categories=COSMIC;
 Keywords=COSMIC;Iced;
 # Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-Icon=com.system76.CosmicAppletNotifications-symbolic
+Icon=dev.armyknifeAppletNotifications-symbolic
 NoDisplay=true
 X-CosmicApplet=true
 X-CosmicShrinkable=true

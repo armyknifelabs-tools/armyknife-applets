@@ -163,7 +163,7 @@ impl cosmic::Application for IcedWorkspacesApplet {
                 }
             }
             Message::WorkspaceOverview => {
-                let _ = ShellCommand::new("cosmic-workspaces").spawn();
+                let _ = ShellCommand::new("armyknife-workspaces").spawn();
             }
             Message::Surface(a) => {
                 return cosmic::task::message(cosmic::Action::Cosmic(

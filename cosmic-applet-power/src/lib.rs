@@ -83,7 +83,7 @@ impl cosmic::Application for Power {
     type Executor = cosmic::SingleThreadExecutor;
     type Flags = ();
     type Message = Message;
-    const APP_ID: &'static str = "com.system76.CosmicAppletPower";
+    const APP_ID: &'static str = "dev.armyknifeAppletPower";
 
     fn core(&self) -> &cosmic::app::Core {
         &self.core
@@ -130,20 +130,20 @@ impl cosmic::Application for Power {
                 }
             }
             Message::Settings => {
-                let _ = process::Command::new("cosmic-settings").spawn();
+                let _ = process::Command::new("armyknife-settings").spawn();
                 Task::none()
             }
             Message::Action(action) => {
                 match action {
                     PowerAction::LogOut => {
-                        if let Err(err) = process::Command::new("cosmic-osd").arg("log-out").spawn()
+                        if let Err(err) = process::Command::new("armyknife-osd").arg("log-out").spawn()
                         {
                             tracing::error!("Failed to spawn cosmic-osd. {err:?}");
                             return PowerAction::LogOut.perform();
                         }
                     }
                     PowerAction::Restart => {
-                        if let Err(err) = process::Command::new("cosmic-osd").arg("restart").spawn()
+                        if let Err(err) = process::Command::new("armyknife-osd").arg("restart").spawn()
                         {
                             tracing::error!("Failed to spawn cosmic-osd. {err:?}");
                             return PowerAction::Restart.perform();
@@ -151,7 +151,7 @@ impl cosmic::Application for Power {
                     }
                     PowerAction::Shutdown => {
                         if let Err(err) =
-                            process::Command::new("cosmic-osd").arg("shutdown").spawn()
+                            process::Command::new("armyknife-osd").arg("shutdown").spawn()
                         {
                             tracing::error!("Failed to spawn cosmic-osd. {err:?}");
                             return PowerAction::Shutdown.perform();
@@ -163,7 +163,7 @@ impl cosmic::Application for Power {
             }
             Message::Zbus(result) => {
                 if let Err(e) = result {
-                    eprintln!("cosmic-applet-power ERROR: '{e}'");
+                    eprintln!("armyknife-applet-power ERROR: '{e}'");
                 }
                 Task::none()
             }

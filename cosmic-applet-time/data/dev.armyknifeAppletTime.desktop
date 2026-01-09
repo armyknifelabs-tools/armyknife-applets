@@ -11,12 +11,12 @@ Name[sk]=Dátum, čas a kalendár
 Name[es]=Fecha, hora y calendario
 Name[sv]=Datum, Tid & Kalender
 Type=Application
-Exec=cosmic-applet-time
+Exec=armyknife-applet-time
 Terminal=false
 Categories=COSMIC;
 Keywords=COSMIC;Iced;
 # Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-Icon=com.system76.CosmicAppletTime-symbolic
+Icon=dev.armyknifeAppletTime-symbolic
 NoDisplay=true
 X-CosmicApplet=true
 X-CosmicShrinkable=true

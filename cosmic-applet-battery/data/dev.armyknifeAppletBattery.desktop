@@ -12,12 +12,12 @@ Name[de]=Energie und Akku
 Name[sk]=Napájanie a batéria
 Name[sv]=Ström & batteri
 Type=Application
-Exec=cosmic-applet-battery
+Exec=armyknife-applet-battery
 Terminal=false
 Categories=COSMIC;
 Keywords=COSMIC;Iced;
 # Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-Icon=com.system76.CosmicAppletBattery-symbolic
+Icon=dev.armyknifeAppletBattery-symbolic
 StartupNotify=true
 NoDisplay=true
 X-CosmicApplet=true

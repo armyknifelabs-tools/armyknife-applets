@@ -11,12 +11,12 @@ Name[sk]=Používateľská relácia
 Name[sv]=Användarsession
 Name[es]=Sesión de usuario
 Type=Application
-Exec=cosmic-applet-power
+Exec=armyknife-applet-power
 Terminal=false
 Categories=COSMIC;
 Keywords=COSMIC;Iced;
 # Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-Icon=com.system76.CosmicAppletPower-symbolic
+Icon=dev.armyknifeAppletPower-symbolic
 StartupNotify=true
 NoDisplay=true
 X-CosmicApplet=true

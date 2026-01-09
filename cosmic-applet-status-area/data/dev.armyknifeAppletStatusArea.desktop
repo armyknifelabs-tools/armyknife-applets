@@ -11,12 +11,12 @@ Name[sk]=Panel oznámení
 Name[sv]=Fält för programikoner
 Name[es]=Bandeja de notificaciones
 Type=Application
-Exec=cosmic-applet-status-area
+Exec=armyknife-applet-status-area
 Terminal=false
 Categories=COSMIC;
 Keywords=COSMIC;Iced;
 # Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-Icon=com.system76.CosmicAppletStatusArea
+Icon=dev.armyknifeAppletStatusArea
 StartupNotify=true
 NoDisplay=true
 X-CosmicApplet=true

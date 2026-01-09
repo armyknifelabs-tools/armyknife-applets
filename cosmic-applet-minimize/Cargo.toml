@@ -1,5 +1,5 @@
 [package]
-name = "cosmic-applet-minimize"
+name = "armyknife-applet-minimize"
 version = "1.0.0"
 edition = "2024"
 license = "GPL-3.0-only"

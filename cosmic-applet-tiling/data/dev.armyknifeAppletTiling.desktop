@@ -12,12 +12,12 @@ Name[sk]=Dláždenie okien
 Name[sv]=Kakling
 Name[es]=Ventanas mosaico
 Type=Application
-Exec=cosmic-applet-tiling
+Exec=armyknife-applet-tiling
 Terminal=false
 Categories=COSMIC;
 Keywords=COSMIC;Iced;
 # Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-Icon=com.system76.CosmicAppletTiling-symbolic
+Icon=dev.armyknifeAppletTiling-symbolic
 StartupNotify=true
 NoDisplay=true
 X-CosmicApplet=true
